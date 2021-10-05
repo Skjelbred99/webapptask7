@@ -15,6 +15,7 @@ const Main = () => {
       // Try catch block to catch possible errors incase something goes wrong
       try {
         const data = await response.json()
+
         // Creating objects from the data pulled from API
         const newMovie = data.Search.map((movie) => ({
           title: movie.Title,
