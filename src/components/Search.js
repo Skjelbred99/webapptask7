@@ -1,4 +1,5 @@
 const Search = ({ search, setSearch, getMovies }) => {
+  
   const handleSearchChange = (e) => {
     e.preventDefault()
     setSearch(e.currentTarget.value)

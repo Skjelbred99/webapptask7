@@ -8,20 +8,22 @@ const Main = () => {
 
   useEffect(() => {
     async function fetchData() {
+      // Fetching data from API, searching for the search variable from usestate (currently "star wars")
       const response = await fetch(
         `https://www.omdbapi.com/?s=${search}&apikey=616b2caa`
       )
+      // Try catch block to catch possible errors incase something goes wrong
       try {
         const data = await response.json()
+        // Creating objects from the data pulled from API
         const newMovie = data.Search.map((movie) => ({
           title: movie.Title,
           year: movie.Year,
           poster: movie.Poster,
         }))
 
-        // Vet oppgaven sa vis 5 men 6 ser mer symmetrisk ut :)
-        // setMovies(newMovie.slice(5), ...movies) for å vise 5
-        setMovies(newMovie.slice(4), ...movies)
+        // Catching possible errors
+        setMovies(newMovie.slice(4), ...movies) // Vet oppgaven sa vis 5 men 6 ser mer symmetrisk ut :)
       } catch (error) {
         console.log(`error: ${error}`)
       }
@@ -35,6 +37,7 @@ const Main = () => {
     console.log(movies)
   }, [movies])
 
+  // function to fetch data from api based on search
   const getMovies = async (e) => {
     e.preventDefault()
     const response = await fetch(
