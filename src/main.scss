@@ -1,0 +1,102 @@
+@import 'reset.scss';
+
+main {
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: lightcoral;
+}
+
+header {
+  font-size: 50px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: lightcoral;
+}
+
+.moviesGrid {
+  margin: 0 auto;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+  left: 50%;
+  width: 900px;
+  display: grid;
+  grid-gap: 24px;
+  grid-row-gap: 90px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "movie movie movie"
+}
+
+img{
+  margin: auto;
+  padding-top: 10px;
+  left: 50%;
+  width: 15rem;
+  height: 25rem;
+}
+
+.movieItem {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: lightcoral;
+  height: auto;
+  width: auto;
+}
+
+.movieItem h1 {
+  height: 30px;
+}
+
+form {
+  position: sticky;
+  width: 900px;
+  font-family: Nunito;
+  margin: auto;
+  border: 1px solid white; 
+  border-radius: 9px;
+  background-color: white;
+  padding: 10px;
+  color: black;
+}
+
+button {
+  position: absolute;
+  font-family: Nunito;
+  font-size: 1rem;
+  color: white;
+  background-color: lightcoral;
+  border-radius: 5px;
+  float: right;
+  height: 2.6rem;
+  width: 10rem;
+  border: 0.2px solid #ff936c;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: coral;
+}
+
+input
+{
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white;
+  padding: 12px;
+  border-radius: 3px;
+  width: 78%;
+  font-size: 14px;
+}
+
+
